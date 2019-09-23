@@ -2,21 +2,27 @@
 
 int main()
 {
- int n,a,i,s;
+ int n,j,i,s=0;
     do
     {
         scanf("%d",&n);
-    } while(n<1 || n>1000);
-    for(i=0;i<=a;i++)
+    } 
+    while(n<2 || n>999);
+
+    for(i=2;i<=n;i++)
     {
-    if(n%i==0)
-    {
-        s++;
-    }
-    if(s==2)
-    {
-        printf("%d",);
-    }
+        s=0;
+        for(j=1;j<=i;j++)
+        {
+            if(i%j==0)
+            {
+                s++;
+            }
+        }
+        if(s==2)
+        {
+            printf("%d ",i);
+        }
     }
     return 0;
 }
